@@ -1,12 +1,14 @@
-#include<iostream>
-#include<list>
+#include <bits/stdc++.h> 
 using namespace std;
 
 void display(list<int> &lst){
-    list<int> :: iterator it;
-    for(it=lst.begin();it!=lst.end();it++){
+   // list<int> :: iterator it;
+    for(auto it=lst.begin();it!=lst.end();++it){
         cout<<*it<<" ";
     }
+    // for(it=lst.begin();it!=lst.end();++it){
+    //     cout<<*it<<" ";
+    // }
      cout<<endl;
 }
 
@@ -32,15 +34,21 @@ int main(){
     //reversing the list
     //list1.reverse();
 
-     list<int>list2(3); //empty list of size 3
-     list<int> :: iterator iter;
-     iter=list2.begin();
-     *iter=6;
-     iter++;
-     *iter=50;
-     iter++;
-     *iter=10;
-     iter++;
+    //  list<int>list2(3); //empty list of size 3
+    //  list<int> :: iterator iter;
+    //  iter=list2.begin();
+    //  *iter=6;
+    //  iter++;
+    //  *iter=50;
+    //  iter++;
+    //  *iter=10;
+     
+       list<int>list2;   //list of 0 length
+     list2.push_back(5);
+     list2.push_back(6);
+     list2.push_back(50);
+     list2.push_back(10);
+
      display(list2);
 
      list1.merge(list2);

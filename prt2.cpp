@@ -40,4 +40,16 @@ int main()
    int c= count1(b,i);
    cout<<c<<endl;
     return 0;
+
+
+    /*one line coe
+    int number,count=0;
+    cin>>number;
+    while(number!=0){
+        number= number & (number<<1);
+        count++;
+    }
+    
+    */
+
 }

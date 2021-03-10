@@ -36,12 +36,21 @@ class Solution{
         }
 
 		int getHeight(Node* root){
-          Node *p=root;int a=0;
-          while(p->right!=NULL){
-              p=p->right;
-              a++;
+          
+          if(root==NULL){
+              return -1;
           }
-          return a;
+          else{
+            int a = getHeight(root->left);
+            int b = getHeight(root->right);
+             
+             if(a>b){
+                 return a+1;
+             } 
+             else{
+                 return b+1;
+             }
+          }
         }
 
 }; //End of Solution
